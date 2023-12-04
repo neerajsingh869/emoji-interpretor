@@ -26,6 +26,26 @@ function Header() {
   )
 }
 
+function Main() {
+
+  return (
+    <main>
+      <input 
+        type="text" 
+        placeholder="Search symbols emoji"
+      />
+      <div>
+        <div style={{ marginBottom: "1rem", fontSize: "1.4rem" }}>
+          { emojiInput }
+        </div>
+        <div>
+          { emojiMeaning }
+        </div>
+      </div>
+    </main>
+  )
+}
+
 function Footer() {
   return (
     <footer>
@@ -43,11 +63,15 @@ function Footer() {
 }
 
 function App() {
+  const [ emojiInput, setEmojiInput ] = useState("");
+	const [ emojiMeaning, setEmojiMeaning ] = useState("emoji info will shown here...");
 
   return (
     <>
       <div>
 				<Header />
+        <Main 
+          states={{ emojiInputState: emojiInput, emojiMeaningState: emojiMeaning }} />
         <Footer />
 			</div>
     </>
