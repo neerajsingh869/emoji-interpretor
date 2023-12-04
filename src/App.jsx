@@ -16,6 +16,8 @@ const symbolEmojisDictionary = {
 	"⚕️": "Medical Symbol"
 }
 
+const symbolEmojisAsList = Object.keys(symbolEmojisDictionary);
+
 function App() {
 
   return (
