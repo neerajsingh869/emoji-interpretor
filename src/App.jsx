@@ -87,7 +87,7 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className="app">
 				<Header />
         <Main 
           states={{ emojiInputState: emojiInput, emojiMeaningState: emojiMeaning }}
