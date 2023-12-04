@@ -35,7 +35,7 @@ function Main({ states, eventHandlers }) {
         placeholder="Search symbols emoji"
         onChange={ eventHandlers.emojiInputHandler }
       />
-      <div>
+      <div className="emoji-info-container">
         <div style={{ marginBottom: "1rem", fontSize: "1.4rem" }}>
           { states.emojiInputState }
         </div>

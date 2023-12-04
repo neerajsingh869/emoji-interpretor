@@ -24,3 +24,9 @@ input {
   border: 2px solid black;
   padding: 0rem 0.5rem;
 }
+
+/* Emoji Information Output */
+.emoji-info-container {
+  margin: 1.5rem;
+  font-size: 1.2rem;
+}
