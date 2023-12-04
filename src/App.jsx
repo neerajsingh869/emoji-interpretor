@@ -26,13 +26,14 @@ function Header() {
   )
 }
 
-function Main({ states, setStates }) {
+function Main({ states, eventHandlers }) {
 
   return (
     <main>
       <input 
         type="text" 
         placeholder="Search symbols emoji"
+        onChange={ eventHandlers.emojiInputHandler }
       />
       <div>
         <div style={{ marginBottom: "1rem", fontSize: "1.4rem" }}>
@@ -66,12 +67,27 @@ function App() {
   const [ emojiInput, setEmojiInput ] = useState("");
 	const [ emojiMeaning, setEmojiMeaning ] = useState("emoji info will shown here...");
 
+  const handlerEmojiInputChange = (e) => {
+		const emojiInput = e.target.value;
+		setEmojiInput(emojiInput);
+
+		if (emojiInput === undefined) {
+			setEmojiMeaning("Emoji not found in database.");
+		} else if (emojiInput in symbolEmojisDictionary) {
+			setEmojiMeaning(symbolEmojisDictionary[emojiInput]);
+		} else {
+			setEmojiMeaning("Failure to recognize emoji");
+		}
+	}
+
   return (
     <>
       <div>
 				<Header />
         <Main 
-          states={{ emojiInputState: emojiInput, emojiMeaningState: emojiMeaning }} />
+          states={{ emojiInputState: emojiInput, emojiMeaningState: emojiMeaning }}
+          eventHandlers={{ emojiInputHandler: handlerEmojiInputChange }}   
+        />
         <Footer />
 			</div>
     </>
