@@ -26,7 +26,7 @@ function Header() {
   )
 }
 
-function Main() {
+function Main({ states, setStates }) {
 
   return (
     <main>
@@ -36,10 +36,10 @@ function Main() {
       />
       <div>
         <div style={{ marginBottom: "1rem", fontSize: "1.4rem" }}>
-          { emojiInput }
+          { states.emojiInputState }
         </div>
         <div>
-          { emojiMeaning }
+          { states.emojiMeaningState }
         </div>
       </div>
     </main>
