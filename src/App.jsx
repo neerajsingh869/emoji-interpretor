@@ -47,13 +47,14 @@ function Main({ states, eventHandlers }) {
   )
 }
 
-function Footer() {
+function Footer({ eventHandlers }) {
   return (
     <footer>
       { symbolEmojisAsList.map(emojiItem => {
         return (
           <span
             key={ emojiItem }
+            onClick={ () => eventHandlers.emojiClickHandler(emojiItem) }
           >
             { emojiItem }
           </span>
@@ -80,6 +81,10 @@ function App() {
 		}
 	}
 
+  const handleEmojiClick = (emoji) => {
+		setEmojiMeaning(symbolEmojisDictionary[emoji]);
+	}
+
   return (
     <>
       <div>
@@ -88,7 +93,7 @@ function App() {
           states={{ emojiInputState: emojiInput, emojiMeaningState: emojiMeaning }}
           eventHandlers={{ emojiInputHandler: handlerEmojiInputChange }}   
         />
-        <Footer />
+        <Footer eventHandlers={{ emojiClickHandler: handleEmojiClick }}/>
 			</div>
     </>
   )
