@@ -18,11 +18,21 @@ const symbolEmojisDictionary = {
 
 const symbolEmojisAsList = Object.keys(symbolEmojisDictionary);
 
+function Header() {
+  return (
+      <header>
+        <h1>know symbols emojis!</h1>
+      </header>
+  )
+}
+
 function App() {
 
   return (
     <>
-      
+      <div>
+				<Header />
+			</div>
     </>
   )
 }
