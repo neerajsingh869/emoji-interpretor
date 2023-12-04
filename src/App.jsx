@@ -20,9 +20,25 @@ const symbolEmojisAsList = Object.keys(symbolEmojisDictionary);
 
 function Header() {
   return (
-      <header>
-        <h1>know symbols emojis!</h1>
-      </header>
+    <header>
+      <h1>know symbols emojis!</h1>
+    </header>
+  )
+}
+
+function Footer() {
+  return (
+    <footer>
+      { symbolEmojisAsList.map(emojiItem => {
+        return (
+          <span
+            key={ emojiItem }
+          >
+            { emojiItem }
+          </span>
+        )
+      }) }
+    </footer>
   )
 }
 
@@ -32,6 +48,7 @@ function App() {
     <>
       <div>
 				<Header />
+        <Footer />
 			</div>
     </>
   )
