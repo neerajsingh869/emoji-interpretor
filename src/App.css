@@ -35,3 +35,11 @@ input {
 footer {
   padding: 0rem 4rem;
 }
+
+/* Emoji Display Item */
+.emojis-list-item {
+  margin: 0.5rem 1rem;
+  font-size: 1.8rem;
+  cursor: pointer;
+  display: inline-block;
+}

@@ -54,6 +54,7 @@ function Footer({ eventHandlers }) {
         return (
           <span
             key={ emojiItem }
+            className="emojis-list-item"
             onClick={ () => eventHandlers.emojiClickHandler(emojiItem) }
           >
             { emojiItem }
