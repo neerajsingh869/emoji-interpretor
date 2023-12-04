@@ -30,3 +30,8 @@ input {
   margin: 1.5rem;
   font-size: 1.2rem;
 }
+
+/* Footer */
+footer {
+  padding: 0rem 4rem;
+}
