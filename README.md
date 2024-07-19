@@ -1,1 +1,1 @@
-#### Checkout my [emoji interpretor](https://emoji-interpretor869.netlify.app/) app to get short info about few symbol emojis
+#### Checkout my [emoji interpretor](https://emoji-interpretor869.netlify.app/) app to get short info about few symbol emojis that you use in daily life
